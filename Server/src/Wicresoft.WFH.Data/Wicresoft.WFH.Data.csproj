@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08DE62AF-C263-4EA2-8376-107E58EF2BBC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wicresoft.WFH.Data</RootNamespace>
+    <AssemblyName>Wicresoft.WFH.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessEvent.generated.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="Device.generated.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntitiesGen.Common.cs" />
+    <Compile Include="EntitiesGen.Context.cs">
+      <DependentUpon>EntitiesGen.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EntitiesGen.Entities.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Extensions\DbSetExtension.cs" />
+    <Compile Include="Extensions\MainDbEntitiesExtension.cs" />
+    <Compile Include="Extensions\ObjectContextExtension.cs" />
+    <Compile Include="Extensions\QueryableExtension.cs" />
+    <Compile Include="FakeWorkFromHomeEntities.generated.cs">
+      <DependentUpon>EntitiesGen.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FakeWorkFromHomeEntitiesBase.generated.cs">
+      <DependentUpon>EntitiesGen.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IdentityEntity.cs" />
+    <Compile Include="IWorkFromHomeEntities.generated.cs">
+      <DependentUpon>EntitiesGen.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.generated.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Module.generated.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Organization.generated.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Permission.generated.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Role.generated.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleMenuMap.generated.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RolePermissionMap.generated.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.generated.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserPermissionMap.generated.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRoleMap.generated.cs">
+      <DependentUpon>EntitiesGen.Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WFH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WFH.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="WFH.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WFH.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="EntitiesGen.Functions.t4" />
+    <None Include="packages.config" />
+    <None Include="WFH.edmx.diagram">
+      <DependentUpon>WFH.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntitiesGen.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EntitiesGen.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntitiesGen.Entities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EntitiesGen.Entities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wicresoft.WFH.Core\Wicresoft.WFH.Core.csproj">
+      <Project>{0B211A69-E55C-4B82-B4FC-F6E75FD941F1}</Project>
+      <Name>Wicresoft.WFH.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

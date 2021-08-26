@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c7363fd3bf5247bfa8a86bac0042017a" Name="Diagram1">
+        <EntityTypeShape EntityType="WorkFromHomeModel.AccessEvent" Width="1.5" PointX="5.25" PointY="4" IsExpanded="false" />
+        <EntityTypeShape EntityType="WorkFromHomeModel.Menu" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="WorkFromHomeModel.Module" Width="1.5" PointX="1.5" PointY="5.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="WorkFromHomeModel.Organization" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="WorkFromHomeModel.Permission" Width="1.5" PointX="3" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="WorkFromHomeModel.Role" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="WorkFromHomeModel.RoleMenuMap" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="WorkFromHomeModel.RolePermissionMap" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="WorkFromHomeModel.User" Width="1.5" PointX="3" PointY="3.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="WorkFromHomeModel.UserPermissionMap" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="WorkFromHomeModel.UserRoleMap" Width="1.5" PointX="7.5" PointY="3.25" IsExpanded="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_AccessEvent_UserId_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_Menu_ModuleId_Module_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_Menu_ParentId_Menu_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_Permission_MenuId_Menu_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_RoleMenuMap_MenuId_Menu_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_Organization_CreatedUserId_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_Organization_LastUpdatedUserId_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_Organization_ParentId_Organization_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_User_OrganizationId_Organization_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_RolePermissionMap_PermissionId_Permission_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_UserPermissionMap_PermissionId_Permission_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_Role_CreatedUserId_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_Role_LastUpdatedUserId_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_RoleMenuMap_RoleId_Role_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_RolePermissionMap_RoleId_Role_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_UserRoleMap_RoleId_Role_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_User_CreatedUserId_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_User_LastUpdatedUserId_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_User_ManagerId_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_UserPermissionMap_UserId_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_UserRoleMap_UserId_User_Id" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="WorkFromHomeModel.Device" Width="1.5" PointX="0.75" PointY="6.75" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_Device_CreatedUserId_User_Id" />
+        <AssociationConnector Association="WorkFromHomeModel.FK_Device_LastUpdatedUserId_User_Id" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
